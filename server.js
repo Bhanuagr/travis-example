@@ -31,4 +31,6 @@ io.on("connection", (socket) => {
   });
 });
 
+console.log("Added to test build process with travis CI");
+
 server.listen(port, () => console.log(`Listening on port ${port}`));
