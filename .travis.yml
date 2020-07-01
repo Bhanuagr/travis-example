@@ -6,3 +6,10 @@ before_install:
 cache: npm
 
 script: echo "npm test temporarily disabled"
+
+notifications:
+    email:
+      recipients:
+        - bhanuagrawal2018@gmail.com
+      on_success: always
+      on_failure: always
