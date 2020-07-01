@@ -1,31 +1,32 @@
 language: node_js
 
 node_js:
-    - 8.9.4
+  - 8.9.4
 
 # before_install:
 #     - nvm install 8.9.4
 
-cache: npm
+cache:
+  npm: false
 
 # safelist
 branches:
-    only:
+  only:
     - master
     - development
-    
+
 jobs:
-    include:
-      - stage: install dependencies
-        script: npm install
-      - stage: run unit tests
-        script: echo "npm test temporarily disabled"
-        
+  include:
+    - stage: install dependencies
+      script: npm install
+    - stage: run unit tests
+      script: echo "npm test temporarily disabled"
+
 # script: echo "npm test temporarily disabled"
 
 notifications:
-    email:
-      recipients:
-        - bhanuagrawal2018@gmail.com
-      on_success: always
-      on_failure: always
+  email:
+    recipients:
+      - bhanuagrawal2018@gmail.com
+    on_success: always
+    on_failure: always
